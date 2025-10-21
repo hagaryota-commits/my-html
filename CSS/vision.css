@@ -1,0 +1,154 @@
+/*背景、フォント*/
+body {
+  background-color: #f5f5dc;
+  font-family: sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+/*navボタン*/
+.main-nav {
+  background-color: #fffaf0;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.main-nav li a.active {
+  color: #0095f6;
+  border-bottom: 2px solid #0095f6;
+}
+
+/*見出し*/
+.vision-section {
+  padding: 40px 20px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.vision-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.vision-goal {
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.vision-section h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #555;
+}
+.vision-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.vision-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.vision-item:nth-child(1) { 
+         animation-delay: 0.2s; 
+}
+.vision-item:nth-child(2) { 
+         animation-delay: 0.4s; 
+}
+.vision-item:nth-child(3) { 
+         animation-delay: 0.6s; 
+}
+.vision-item:nth-child(4) { 
+         animation-delay: 0.8s; 
+}
+.vision-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #0095f6;
+}
+.vision-item p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/*アニメーション:fadeInUp*/
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: pageFadeIn 1s ease-in-out;
+}
+/*アニメーション:FadeIn*/
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*スマホ（レスポンシブ対応）*/
+@media screen and (max-width: 768px) {
+
+.vision-section {
+    padding: 20px 15px;
+    text-align: left;
+}
+.vision-section h2 {
+    font-size: 24px;
+    text-align: center;
+}
+.vision-section h3 {
+    font-size: 18px;
+}
+.vision-goal {
+    font-size: 16px;
+}
+.vision-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+}
+.vision-item h4 {
+    font-size: 16px;
+}
+.vision-item p {
+    font-size: 14px;
+}
+.main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
+.main-nav li a {
+    font-size: 16px;
+}
+}
+

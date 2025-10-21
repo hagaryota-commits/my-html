@@ -1,0 +1,139 @@
+/*背景、フォント*/
+body {
+  background-color: #f5f5dc;
+  font-family: sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+/*navボタン*/
+.main-nav {
+  background-color: #fffaf0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.main-nav li a.active {
+  color: #0095f6;
+  border-bottom: 2px solid #0095f6;
+}
+
+/*プロフィール*/
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.profile-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #aaa;
+}
+.profile-details {
+  max-width: 400px;
+}
+/*お気に入り*/
+.favorites-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.favorites-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.favorites-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+/*お気に入り写真*/
+.favorite-item {
+  max-width: 280px;
+  text-align: center;
+}
+.favorite-item img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform .6s ease; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/*画像の拡大（1.15倍）*/
+.favorite-item img:hover {
+  transform: scale(1.15); 
+}
+.favorite-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/*スマホ（レスポンシブ対応）*/
+@media screen and (max-width: 768px) {
+
+/*縦並びに変更 */
+.private-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+}
+.private-top img {
+    width: 150px;
+}
+.profile-text {
+    font-size: 14px;
+    max-width: 100%;
+}
+
+/*画像を縦並びに変更 */
+.favorites {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.favorite-item {
+    width: 90%;
+}
+
+.favorite-item img {
+    width: 100%;
+    height: auto;
+}
+
+.favorite-item p {
+    font-size: 14px;
+}
+}
+

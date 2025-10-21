@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private</title>
+  <link rel="stylesheet" href="CSS/private.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="private.html" class="active">Private</a></li>
+      <li><a href="goodpoint.html">Good point</a></li>
+      <li><a href="vision.html">Vision</a></li>
+    </ul>
+  </nav>
+
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="20251018-134534.jpeg" alt="プロフィール画像">
+    </div>
+    <div class="profile-details">
+      <h1>芳賀　亮太</h1>
+      <p>年齢: 27歳</p>
+      <p>出身: 神奈川県</p>
+      <p>趣味: バスケットボール・ラーメン巡り・散歩</p>
+      <p>好きな漫画: ONE PIECE・鋼の錬金術師</p>
+      <p>前職では、整体師を3年、SESとして給与システムの改修を1年ほど携わっていました。
+         最近ブラックのコーヒーを美味しく飲めるようになったので美味しいコーヒーの情報募集してます！</p>
+    </div>
+  </section>
+
+  <section class="favorites-section">
+    <h2>最近のお気に入り</h2>
+    <div class="favorites-gallery">
+      <div class="favorite-item">
+        <img id="myDog" src="20251018-132805.jpeg" alt="実家の犬の写真">
+         <script>
+            const images = [
+                  { src: "20251018-132805.jpeg", alt: "画像1" },
+                  { src: "20251020-141354.jpeg", alt: "画像2" },
+                  { src: "20251020-141631.jpeg", alt: "画像3" },
+             ];
+
+            let currentIndex = 0;
+            const imgElement = document.getElementById("myDog");
+
+            setInterval(() => {
+               currentIndex = (currentIndex + 1) % images.length;
+               imgElement.src = images[currentIndex].src;
+               imgElement.alt = images[currentIndex].alt;
+             }, 3000); 
+         </script>
+        <p>🐶実家で飼っている愛犬🐶<br>
+           ビションフリーゼの「ビビ」<br>
+           今年1歳になった女の子です。
+           名前はONE PIECEのキャラから取りました。この子に会うためによく実家に帰ります！</p>
+      </div>
+      <div class="favorite-item">
+        <img src="20251018-132826.jpeg" alt="ラーメンの写真">
+        <p>🍜今夏に食べたラーメンで1番お気に入り🍜<br>
+           京王線の上北沢駅近くの「らぁめん小池」
+           写真は夏限定の「冷やしすだちつけ麺」🍜<br>
+           おすすめのお店の１つです！</p>
+      </div>
+      <div class="favorite-item">
+        <img src="20251018-133409.jpeg" alt="スニーカーの写真">
+        <p>👟今気になっているスニーカー👟<br>
+           最近、Onitsuka Tigerのスニーカーに
+           ハマってしまいアプリでずっと眺めています。。。</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
