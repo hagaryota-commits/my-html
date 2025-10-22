@@ -110,5 +110,18 @@
       </div>
     </div>
   </section>
+  <section class="like-section">
+    <button id="likeButton" class="like-button">👍 いいね </button>
+  <script>
+    document.getElementById("likeButton").addEventListener("click", () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "like_button_click",
+        button_name: "いいね"
+      });
+      console.log("📡 like_button_click event fired!");
+    });
+  </script>
+  </section>
 </body>
 </html>

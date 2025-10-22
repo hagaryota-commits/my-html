@@ -95,6 +95,29 @@ body {
   font-size: 14px;
   color: #555;
 }
+.like-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.like-button {
+  background-color: #ffcc66;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-button:hover {
+  background-color: #ffb347;
+  transform: scale(1.05);
+}
+
+.like-button:active {
+  transform: scale(0.95);
+}
 
 /*スマホ（レスポンシブ対応）*/
 @media screen and (max-width: 768px) {
