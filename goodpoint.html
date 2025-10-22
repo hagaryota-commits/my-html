@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google Tag Manager -->
-     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-             })(window,document,'script','dataLayer','GTM-N9HWKZFQ');
-     </script>
-  <!-- End Google Tag Manager -->
+ <!-- Google Tag Manager -->
+　　<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+　　　　　　　new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+　　　　　　　j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+　　　　　　　'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N9HWKZFQ');
+   </script>
+ <!-- End Google Tag Manager -->
+<!-- ページ閲覧数カウント -->
+<script>
+  (function() {
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    let count = parseInt(getCookie("page_count") || "0") + 1;
+    document.cookie = "page_count=" + count + "; path=/; max-age=" + 60*60*24*7;
+
+    if (count >= 3) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "key_user",
+        page_count: count
+      });
+      console.log("✅ key_user event fired! (count=" + count + ")");
+    } else {
+      console.log("👀 Page count = " + count);
+    }
+  })();
+ </script>
   <meta charset="UTF-8">
   <title>Good Point</title>
   <link rel="stylesheet" href="CSS/goodpoint.css">
@@ -25,10 +49,10 @@
 
   <nav class="main-nav">
     <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="private.html">Private</a></li>
-      <li><a href="goodpoint.html" class="active">Good point</a></li>
-      <li><a href="vision.html">Vision</a></li>
+      <li><a href="index.html" class="nav-button" data-btn-name="HOME">HOME</a></li>
+      <li><a href="private.html" class="nav-button" data-btn-name="Private">Private</a>
+      <li><a href="goodpoint.html" class="nav-button" data-btn-name="Good point">Good point</a>
+      <li><a href="vision.html" class="nav-button" data-btn-name="Vision">Vision</a>
     </ul>
   </nav>
 
