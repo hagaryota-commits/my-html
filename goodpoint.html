@@ -11,28 +11,28 @@
  <!-- End Google Tag Manager -->
 <!-- ページ閲覧数カウント -->
 <script>
-  (function() {
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-    }
+    (function() {
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
 
-    let count = parseInt(getCookie("page_count") || "0") + 1;
-    document.cookie = "page_count=" + count + "; path=/; max-age=" + 60*60*24*7;
+      let count = parseInt(getCookie("page_count") || "0") + 1;
+      document.cookie = "page_count=" + count + "; path=/; max-age=" + 60*60*24*7;
 
-    if (count >= 3) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "key_user",
-        page_count: count
-      });
-      console.log("✅ key_user event fired! (count=" + count + ")");
-    } else {
-      console.log("👀 Page count = " + count);
-    }
-  })();
- </script>
+      if (count >= 3) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "key_user",
+          page_count: count
+        });
+        console.log("✅ key_user event fired! (count=" + count + ")");
+      } else {
+        console.log("👀 Page count = " + count);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Good Point</title>
