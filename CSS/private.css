@@ -86,6 +86,47 @@ body {
   transition: transform .6s ease; 
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: Black;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* ホバー時のアニメーション */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.dog {
+  background-color: #ffffff; /* 白 */
+}
+.btn.ramen {
+  background-color: #fffc7a; /* 黄色 */
+}
+.btn.sneaker {
+  background-color: #adffe9; /* 青 */
+}
+
+/* 押下時のエフェクト */
+.btn:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+/* スマホ対応（レスポンシブ） */
+@media (max-width: 600px) {
+  .btn {
+    width: 100%;
+    font-size: 18px;
+  }
+}
 /*画像の拡大（1.15倍）*/
 .favorite-item img:hover {
   transform: scale(1.15); 
@@ -99,26 +140,24 @@ body {
   text-align: center;
   margin: 40px 0;
 }
-
 .like-button {
   background-color: #ffcc66;
   border: none;
   border-radius: 25px;
   padding: 10px 25px;
-  font-size: 18px;
+  font-size: 25px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  width: 200px;
 }
-
 .like-button:hover {
   background-color: #ffb347;
   transform: scale(1.05);
 }
-
 .like-button:active {
   transform: scale(0.95);
 }
-
 /*スマホ（レスポンシブ対応）*/
 @media screen and (max-width: 768px) {
 
