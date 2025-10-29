@@ -128,5 +128,22 @@
     });
   </script>
   </section>
+<script>
+  // すべての .btn クラスにクリックイベントを付与
+  document.querySelectorAll(".btn").forEach(button => {
+    button.addEventListener("click", function() {
+      const buttonName = this.dataset.buttonName; // data-button-name 属性を取得
+      
+      // GA4（GTM）用のデータ送信
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "button_click",
+        button_name: buttonName
+      });
+
+      console.log(`📡 button_click event fired! (${buttonName})`);
+    });
+  });
+</script>
 </body>
 </html>
