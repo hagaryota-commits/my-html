@@ -9,32 +9,6 @@
             })(window,document,'script','dataLayer','GTM-N9HWKZFQ');
    </script>
  <!-- End Google Tag Manager -->
-<!-- ページ閲覧数カウント -->
-<script>
-(function() {
-  function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
-
-  let count = parseInt(getCookie("page_count") || "0") + 1;
-  document.cookie = "page_count=" + count + "; path=/; max-age=" + 60*60*24*7;
-
-  if (count >= 3) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "key_user",
-      page_count: count,
-      page_location: window.location.href,
-      page_title: document.title
-    });
-    console.log("✅ key_user event fired! (count=" + count + ")");
-  } else {
-    console.log("👀 Page count = " + count);
-  }
-})();
-</script>
   <meta charset="UTF-8">
   <title>Vision</title>
   <link rel="stylesheet" href="CSS/vision.css">
