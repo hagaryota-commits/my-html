@@ -90,22 +90,12 @@
   </section>
   <section class="like-section">
     <button id="likeButton" class="like-button">👍 いいね </button>
-  <script>
-    document.getElementById("likeButton").addEventListener("click", () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "like_button_click",
-        button_name: "いいね"
-      });
-      console.log("📡 like_button_click event fired!");
-    });
-  </script>
   </section>
 <script>
   // すべての .btn クラスにクリックイベントを付与
   document.querySelectorAll(".btn").forEach(button => {
     button.addEventListener("click", function() {
-      const buttonName = this.dataset.buttonName; // data-button-name 属性を取得
+      const buttonName = this.dataset.buttonName || this.textContent.trim();
       
       // GA4（GTM）用のデータ送信
       window.dataLayer = window.dataLayer || [];
